@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- gallery images -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- end gallery images -->
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.slider').bxSlider();
+        $('.gallery-images').slick({
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 769,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 320,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+      });
+
+
+    </script>
+    <!-- end slider -->
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <header>
+          <nav>
+            <ul>
+              <li><a href="#">PROGRAM</a></li>
+              <li><a href="#">GALLERY</a></li>
+              <li><a href="#">REVIEWS</a></li>
+              <li><a href="#">PARTNERS</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="phone-number">
+              <span>+</span><span>38 (099) 66-11-730</span>
+            </div>
+          </nav>
+          <article class="header-content">
+            <span class="stars">
+              <i class="fas fa-star header-star lightyellow"></i>
+              <i class="fas fa-star header-star lightyellow"></i>
+              <i class="fas fa-star header-star lightyellow"></i>
+            </span>
+            <h4>Intensive program barista training</h4>
+            <h1>BARISTA TRAINING IN <span class="lightyellow">AMSTERDAM</span></h1>
+            <h3>On the basis of the company's largest coffee roasters</h3>
+            <div class="separator"><span class="circle"></span></div>
+            <span class="circle-button"><i class="fas fa-chevron-down lightyellow circle-icon"></i></span>
+          </article>
+      </header>
+      <div class="main-container">
+        <section class="container program-container">
+          <article class="program-content">
+            <h2><i class="fas fa-star darkgray title-star"></i>PROGRAMS<i class="fas fa-star darkgray title-star"></i></h2>
+            <h6>We share their experiences and professional barista championship multiple winners</h6>
+            <div class="program-course">
+              <nav>
+                <ul>
+                  <li><a href="#">BASIC</a></li>
+                  <li><a href="#">PREMIUM</a></li>
+                  <li><a href="#">PLATINUM</a></li>
+                </ul>
+              </nav>
+              <div class="program-image-description">
+                <figure>
+                  <img src="https://picsum.photos/700/400" alt="">
+                </figure>
+                <div class="image-text">
+                  <span class="program-title">Beginners Course</span>
+                  <div class="program-icons">
+                    <i class="far fa-list-alt"><span>Certificate</span></i>
+                    <i class="far fa-clock"><span>240 minets</span></i>
+                  </div>
+                  <span class="program-price">1500 <span class="price-currency">usd</span></span>
+                  <button type="button" name="button" class="program-registration-button">REGISTRATION</button>
+                </div>
+              </div>
+              <div class="program-columns">
+                <div class="column">
+                  <span class="column-title">PROVENANCE COFFEE AND BASIC CONCEPTS:</span>
+                  <ul>
+                    <li>Legend of the origin of coffee.</li>
+                    <li>- Chronicle of the spread of the coffee tree</li>
+                    <li>- What is coffee?</li>
+                    <li>- The structure of the coffee berry</li>
+                    <li>- Arabica and Robusta</li>
+                    <li>- Coffee Belt land</li>
+                    <li>- Fruiting coffee tree</li>
+                    <li>- Seven steps of the coffee plantation to the consumer</li>
+                    <li>- Breeding and hybridization of coffee tree</li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <span class="column-title">coffee production technology:</span>
+                  <ul>
+                    <li>- Methods for collecting coffee berries</li>
+                    <li>- Processing collected berries</li>
+                    <li>- Calibration and sorting</li>
+                    <li>- Some methods of classification and labeling of coffee beans.</li>
+                    <li>- Formation of grade names.</li>
+                    <li>- Storage of green (not fried) Coffee</li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <span class="column-title">roasting Technology bean. and Stage types of roasting.</span>
+                  <ul>
+                    <li>- The technology of roasting coffee beans.</li>
+                    <li>- Changes in the beans.</li>
+                    <li>- Stages and types of roasting.</li>
+                    <li>- Roasted coffee. Monosorta and hood.</li>
+                    <li>- Decaffeination of coffee</li>
+                    <li>- Flavoring</li>
+                    <li>- Storage roasted coffee</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="program-table">
+                <span class="column-title">The course also includes:</span>
+                <table>
+                  <tr>
+                    <td><i class="fas fa-check green table-icon"></i></td>
+                    <td>Coffee machine and grinder - practice - types of coffee machines and coffee grinders</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-check green table-icon"></i></td>
+                    <td>What makes professional coffee machines and coffee grinders.</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>Main components of coffee machines and coffee-Lathes, autolathes. Their purpose</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>How to choose a coffee machine and coffee grinder</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>The structure of the machine. How to maintain, clean and customize coffee machine</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>The structure of the grinders. How to maintain, clean and customize coffee Molko</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-check green table-icon"></i></td>
+                    <td>Making beverages - praktika- machines and espresso rules</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>Technology and regulations frothed milk</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>Terms of tasting coffee</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>Terms of preparation of standard drinks line: espresso, cappuccino, latte and others.</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>Latte Art - Features practice and the importance of Latte Art in business and the barista</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>1 views Latte Art - Pitching</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>2 views Latte Art - topping</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>3 views Latte Art - Etching</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-times red table-icon"></i></td>
+                    <td>4 views Latte Art - chocolate chip stencils</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="gallery-container">
+          <h2>GALLERY</h2>
+          <h6>You yourself are testing the taste benefits of each method and select the type of cooking yourself</h6>
+          <div class="gallery">
+            <div class="gallery-images">
+              <div><img src="https://picsum.photos/450" alt=""></div>
+              <div><img src="https://picsum.photos/450" alt=""></div>
+              <div><img src="https://picsum.photos/450" alt=""></div>
+              <div><img src="https://picsum.photos/450" alt=""></div>
+              <div><img src="https://picsum.photos/450" alt=""></div>
+              <div><img src="https://picsum.photos/450" alt=""></div>
+            </div>
+          </div>
+        </section>
+        <section class="container testimonials-container">
+          <h2>testimonials</h2>
+          <h6>We have enough patience to teach you the art of coffee</h6>
+          <div class="slider">
+            <div>
+              <figure class="rounded-image">
+                <img src="https://picsum.photos/360" alt="">
+              </figure>
+              <span class="name">Alex Nikandrov</span>
+              <span class="text">Our company is grateful for the delicious and freshly roasted coffee in our office every day! Our staff of more than 300 people, appreciate quality and flavor of the coffee, because that would be important for our office staff were every morning refreshed and in a good mood! Recommended!</span>
+            </div>
+            <div>
+              <figure class="rounded-image">
+                <img src="https://picsum.photos/360" alt="">
+              </figure>
+              <span class="name">Alex Nikandrov</span>
+              <span class="text">Our company is grateful for the delicious and freshly roasted coffee in our office every day! Our staff of more than 300 people, appreciate quality and flavor of the coffee, because that would be important for our office staff were every morning refreshed and in a good mood! Recommended!</span>
+            </div>
+          </div>
+        </section>
+        <section class="container partnets-container">
+          <h2 class="-separation-line"><img src="./images/lines_left.png" alt="">our partners<img src="./images/lines_right.png" alt=""></h2>
+          <div class="slider">
+            <div>
+              <figure>
+                <img src="./images/partners_logos.png" alt="">
+              </figure>
+            </div>
+            <div>
+              <figure>
+                <img src="./images/partners_logos.png" alt="">
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section class="container contact-container">
+          <h2>have questions?</h2>
+          <h6>Leave a request and we will contact you shortly</h6>
+          <form class="" action="index.html" method="post">
+            <div class="inputs-container">
+              <label class="contact-input"><span>your name</span><input type="text" name="name"></label>
+              <label class="contact-input"><span>contact number</span><input type="text" name="number"></label>
+            </div>
+            <div class="button-container"><button type="button" name="button" class="contact-button">send</button></div>
+          </form>
+        </section>
+        <footer class="container">
+          <h2>professional school barista</h2>
+          <div class="footer-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          </div>
+          <div class="footer-table">
+            <nav>
+              <ul>
+                <li><a href="#">program</a></li>
+                <li><a href="#">gallery</a></li>
+                <li><a href="#">testimonials</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+            </nav>
+            <div class="table-row">
+              <div class="table-column">
+                <i class="fas fa-phone"></i>
+                <span class="text">+38 000 000 000</span>
+              </div>
+              <div class="table-column">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="text">Ukraine, 61002</span>
+              </div>
+              <div class="table-column">
+                <i class="fas fa-envelope"></i>
+                <span class="text">hello@.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="copyrights">
+            <span>© Copyright 2017 . All Rights Reserved.</span>
+            <span>site template by  NIKANDROV.PRO</span>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </body>
+</html>
