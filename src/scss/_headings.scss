@@ -1,0 +1,77 @@
+//@import "colors";
+//@import "fonts";
+
+.heading1{
+  font-size: 62px;
+  font-family: IntroRustG;
+}
+
+.heading2{
+  font-size: 54px;
+  font-family: IntroRustG;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+  img{
+    &:first-of-type{
+      margin-right: 55px;
+    }
+    &:last-of-type{
+      margin-left: 55px;
+    }
+  }
+  &.-separation-line{
+    padding-bottom: 50px;
+    &:after{
+      content: "";
+      display: block;
+      width: 240px;
+      height: 1px;
+      background-color: $darkgray;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+
+.heading3{
+  font-size: 22px;
+  font-family: PlayfairDisplayRegular;
+  margin-top: 65px;
+}
+
+.heading4{
+  font-size: 19px;
+  font-family: PlayfairDisplayRegular;
+  margin: 36px 0 65px 0;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+  &:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:115px solid $lightyellow;
+    margin-right: 90px;
+  }
+  &:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 115px solid $lightyellow;
+    margin-left: 90px;
+  }
+}
+
+.heading6{
+  font-size: 17px;
+  margin-bottom: 100px;
+}

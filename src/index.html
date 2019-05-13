@@ -24,20 +24,11 @@
               }
             },
             {
-              breakpoint: 769,
+              breakpoint: 768,
               settings: {
-                slidesToShow: 2,
-              }
-            },
-            {
-              breakpoint: 320,
-              settings: {
-                slidesToShow: 1
+                slidesToShow: 1,
               }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
           ]
         });
       });
@@ -48,7 +39,7 @@
 
     <!-- icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title></title>
@@ -57,7 +48,7 @@
     <main>
       <header>
           <nav>
-            <ul>
+            <ul id="menuDesktop">
               <li><a href="#">PROGRAM</a></li>
               <li><a href="#">GALLERY</a></li>
               <li><a href="#">REVIEWS</a></li>
@@ -68,15 +59,28 @@
               <span>+</span><span>38 (099) 66-11-730</span>
             </div>
           </nav>
+          <nav class="mobile-menu" id="menuToggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li><a href="#">PROGRAM</a></li>
+              <li><a href="#">GALLERY</a></li>
+              <li><a href="#">REVIEWS</a></li>
+              <li><a href="#">PARTNERS</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
           <article class="header-content">
             <span class="stars">
               <i class="fas fa-star header-star lightyellow"></i>
               <i class="fas fa-star header-star lightyellow"></i>
               <i class="fas fa-star header-star lightyellow"></i>
             </span>
-            <h4>Intensive program barista training</h4>
-            <h1>BARISTA TRAINING IN <span class="lightyellow">AMSTERDAM</span></h1>
-            <h3>On the basis of the company's largest coffee roasters</h3>
+            <h4 class="heading4">Intensive program barista training</h4>
+            <h1 class="heading1">BARISTA TRAINING IN <span class="lightyellow">AMSTERDAM</span></h1>
+            <h3 class="heading3">On the basis of the company's largest coffee roasters</h3>
             <div class="separator"><span class="circle"></span></div>
             <span class="circle-button"><i class="fas fa-chevron-down lightyellow circle-icon"></i></span>
           </article>
@@ -84,8 +88,8 @@
       <div class="main-container">
         <section class="container program-container">
           <article class="program-content">
-            <h2><i class="fas fa-star darkgray title-star"></i>PROGRAMS<i class="fas fa-star darkgray title-star"></i></h2>
-            <h6>We share their experiences and professional barista championship multiple winners</h6>
+            <h2 class="heading2 padding-heading"><i class="fas fa-star darkgray title-star"></i>PROGRAMS<i class="fas fa-star darkgray title-star"></i></h2>
+            <h6 class="heading6">We share their experiences and professional barista championship multiple winners</h6>
             <div class="program-course">
               <nav>
                 <ul>
@@ -97,7 +101,7 @@
 
               <div class="program-image-description">
                 <figure>
-                  <img src="https://picsum.photos/700/400" alt="">
+                  <img src="./images/program-image@2x.png" alt="">
                 </figure>
                 <div class="image-text">
                   <span class="program-title">Beginners Course</span>
@@ -217,21 +221,18 @@
           </article>
         </section>
         <section class="gallery-container">
-          <h2>GALLERY</h2>
+          <h2 class="heading2">GALLERY</h2>
           <h6>You yourself are testing the taste benefits of each method and select the type of cooking yourself</h6>
           <div class="gallery">
             <div class="gallery-images">
-              <div><img src="https://picsum.photos/450" alt=""></div>
-              <div><img src="https://picsum.photos/450" alt=""></div>
-              <div><img src="https://picsum.photos/450" alt=""></div>
-              <div><img src="https://picsum.photos/450" alt=""></div>
-              <div><img src="https://picsum.photos/450" alt=""></div>
-              <div><img src="https://picsum.photos/450" alt=""></div>
+              <div><img src="./images/gallery-image01@2x.png" alt=""></div>
+              <div><img src="./images/gallery-image02@2x.png" alt=""></div>
+              <div><img src="./images/gallery-image03@2x.png" alt=""></div>
             </div>
           </div>
         </section>
         <section class="container testimonials-container">
-          <h2>testimonials</h2>
+          <h2 class="heading2">testimonials</h2>
           <h6>We have enough patience to teach you the art of coffee</h6>
           <div class="slider">
             <div>
@@ -251,7 +252,7 @@
           </div>
         </section>
         <section class="container partnets-container">
-          <h2 class="-separation-line"><img src="./images/lines_left.png" alt="">our partners<img src="./images/lines_right.png" alt=""></h2>
+          <h2 class="heading2 -separation-line"><img src="./images/lines_left.png" alt="">our partners<img src="./images/lines_right.png" alt=""></h2>
           <div class="slider">
             <div>
               <figure>
@@ -266,7 +267,7 @@
           </div>
         </section>
         <section class="container contact-container">
-          <h2>have questions?</h2>
+          <h2 class="heading2">have questions?</h2>
           <h6>Leave a request and we will contact you shortly</h6>
           <form class="" action="index.html" method="post">
             <div class="inputs-container">
@@ -277,7 +278,7 @@
           </form>
         </section>
         <footer class="container">
-          <h2>professional school barista</h2>
+          <h2 class="heading2 padding-heading">professional school barista</h2>
           <div class="footer-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>

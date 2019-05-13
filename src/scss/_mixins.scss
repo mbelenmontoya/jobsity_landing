@@ -1,0 +1,8 @@
+@mixin background($number) {
+  background: url("../images/background#{$number}.png") center 0 no-repeat;
+  background-size: cover;
+}
+
+@mixin spaces($property, $value, $position){
+  #{$property}-#{$position}: $value;
+}

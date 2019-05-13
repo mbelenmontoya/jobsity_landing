@@ -8,25 +8,18 @@ a{
   text-decoration: none;
 }
 
-@import "fonts";
-
 //variables de color
+@import "colors";
+@import "mixins";
+// headings
+@import "headings";
 
-$lightyellow: #eab96a;
-$gray: #898685;
-$darkgray: #222222;
-$lightgray: #adadad;
-$white: #FFF;
-$black: #000;
-$green: #6a9c00;
-$red: #c20000;
+@import "font-colors";
 
 
 .container {
     box-sizing: border-box;
-    max-width: 2360px;
     padding: 0 25px;
-    margin: 0 auto;
 }
 
 
@@ -34,10 +27,7 @@ main{
   text-align: center;
 }
 
-//backgrounds
 header{
-  background: url("../images/background01.png") center 0 no-repeat fixed;
-  background-size: cover;
   //navbar
   nav{
     display: flex;
@@ -45,7 +35,7 @@ header{
     padding: 40px 40px 40px 0;
     align-items: center;
     border-bottom: 1px solid $gray;
-    ul{
+    #menuDesktop{
       display: flex;
       li{
         display: flex;
@@ -80,47 +70,56 @@ header{
   }
 }
 
+header{
+  @include background("01");
+  background-attachment: fixed;
+}
+
 .program-container{
-  background: url("../images/background02.png") center 0 no-repeat transparent;
-  background-size: cover;
-  padding-bottom: 160px;
+  @include background("02");
+  @include spaces("padding", 160px, "bottom");
+  @include spaces("margin", -160px, "bottom");
+  @include spaces("margin", -160px, "top");
 }
 
 .gallery-container{
-  background: url("../images/background03.png") center 0 no-repeat fixed;
-  background-size: cover;
+  @include background("03");
   color: $white;
-  padding-bottom: 160px;
+  @include spaces("padding", 160px, "bottom");
+  position: relative;
+  z-index: -1;
+  background-attachment: fixed;
 }
 
 .testimonials-container{
-  background: url("../images/background04.png") center 0 no-repeat transparent;
-  background-size: cover;
-  padding-bottom: 160px;
+  @include background("04");
+  @include spaces("padding", 160px, "bottom");
+  @include spaces("margin", -75px, "top");
 }
 
 .partnets-container{
-  background: url("../images/background05.png") center 0 no-repeat transparent;
-  background-size: cover;
-  padding-bottom: 160px;
+  @include background("05");
+  @include spaces("padding", 160px, "bottom");
 }
 
 .contact-container{
-  background: url("../images/background06.png") 0 no-repeat transparent;
-  background-size: cover;
-  padding-bottom: 160px;
+  @include background("06");
+  @include spaces("padding", 310px, "bottom");
 }
 
 footer{
-  background: url("../images/background07.png") center 0 no-repeat fixed;
-  background-size: cover;
-  padding-bottom: 160px;
+  @include background("07");
+  @include spaces("padding", 160px, "bottom");
+  @include spaces("margin", -100px, "top");
   color: $white;
+  background-attachment: fixed;
+  z-index: -1;
+  position: relative;
 }
 
 
 .phone-number{
-  margin-left: 60px;
+  @include spaces("margin", 60px, "left");
   color: $white;
   font-size: 30px;
   font-family: Intro;
@@ -132,12 +131,12 @@ footer{
   color: $white;
 
   .stars{
-    margin-bottom: 30px;
+    @include spaces("margin", 30px, "bottom");
     .header-star{
       font-size: 18px;
-       margin-right: 25px;
+      @include spaces("margin", 25px, "right");
        &:last-of-type{
-         margin-right: 0;
+         @include spaces("margin", 0, "right");
        }
     }
   }
@@ -157,10 +156,10 @@ footer{
 .title-star{
   font-size: 20px;
   &:first-of-type{
-    margin-right: 40px;
+    @include spaces("margin", 40px, "right");
   }
   &:last-of-type{
-    margin-left: 40px;
+    @include spaces("margin", 40px, "left");
   }
 }
 
@@ -169,103 +168,9 @@ footer{
 }
 
 
-// headings
-h1{
-  font-size: 62px;
-  font-family: IntroRustG;
-}
-
-h2{
-  font-size: 54px;
-  font-family: IntroRustG;
-  padding-top: 160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  position: relative;
-  img{
-    &:first-of-type{
-      margin-right: 55px;
-    }
-    &:last-of-type{
-      margin-left: 55px;
-    }
-  }
-  &.-separation-line{
-    padding-bottom: 50px;
-    &:after{
-      content: "";
-      display: block;
-      width: 240px;
-      height: 1px;
-      background-color: $darkgray;
-      position: absolute;
-      bottom: 0;
-    }
-  }
-}
-
-h3{
-  font-size: 22px;
-  font-family: PlayfairDisplayRegular;
-  margin-top: 65px;
-}
-
-h4{
-  font-size: 19px;
-  font-family: PlayfairDisplayRegular;
-  margin: 36px 0 65px 0;
-  display: flex;
-  align-items: center;
-  justify-content:  center;
-  &:before{
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-right:115px solid $lightyellow;
-    margin-right: 90px;
-  }
-  &:after{
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-left: 115px solid $lightyellow;
-    margin-left: 90px;
-  }
-}
-
-h6{
-  font-size: 17px;
-  margin-bottom: 100px;
-}
-
 .column-title{
   font-size: 19px;
   font-family: Intro;
-}
-
-
-//colors
-
-.lightyellow{
-  color: $lightyellow;
-}
-
-.darkgray{
-  color: $darkgray;
-}
-
-.red{
-  color: $red;
-}
-
-.green{
-  color: $green;
 }
 
 
@@ -343,6 +248,9 @@ h6{
       font-family: Intro;
       font-size: 216px;
     }
+    img{
+      max-width: 700px;
+    }
   }
 
   .image-text{
@@ -350,7 +258,7 @@ h6{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    margin-left: 65px;
+    @include spaces("margin", 65px, "left");
     z-index: 1;
   }
 
@@ -358,7 +266,7 @@ h6{
     font-family: PlayfairDisplayRegular;
     font-weight: bold;
     font-size: 32px;
-    margin-top: 20px;
+    @include spaces("margin", 20px, "top");
   }
 
   .program-icons{
@@ -572,22 +480,28 @@ footer{
   position: absolute;
   bottom: -110px;
   display: block;
-  width: 149px;
-  height: 74px;
+  width: 100px;
+  height: 50px;
   border: none;
   color: transparent;
   &:first-of-type{
-    left: calc(50% - 240px);
+    left: calc(50% - 160px);
     background: url("../images/arrow_left.png") center no-repeat;
     background-size: cover;
   }
   &:last-of-type{
-    left: calc(50% + 70px);
+    left: calc(50% + 50px);
     background: url("../images/arrow_right.png") center no-repeat;
     background-size: cover;
   }
   &:focus{
     outline: 0;
+  }
+}
+
+.slick-slide{
+  img{
+    max-width: 500px;  
   }
 }
 
@@ -666,18 +580,23 @@ form{
   }
 }
 
+#menuToggle{
+  display: none;
+}
+
 
 // mobile
 
 @media (max-width: 768px) {
 
   header{
+    padding-bottom: 70px;
     nav{
       justify-content: flex-end;
       padding: 0;
       padding-right: 20px;
-      ul{
-        display: none !important;
+      #menuDesktop{
+        display: none;
       }
       .phone-number{
         margin: 10px 0;
@@ -689,7 +608,7 @@ form{
     }
   }
 
-  h4{
+  .heading4{
     font-size: 14px;
     margin: 25px 0;
     &:before,
@@ -698,18 +617,35 @@ form{
     }
   }
 
-  h1{
+  .heading1{
     font-size: 40px;
   }
 
-  h3{
+  .heading3{
     margin: 20px 0;
     font-size: 16px;
   }
 
-  h2{
+  .heading2{
     font-size: 30px;
-    padding-top: 50px;
+    padding-top: 40px;
+    &.padding-heading{
+      padding-top: 160px;
+    }
+    img{
+      &:first-of-type{
+        margin-right: 30px;
+      }
+      &:last-of-type{
+        margin-left: 30px;
+      }
+    }
+    &.-separation-line{
+      padding-bottom: 0;
+      &:after{
+        content: none;
+      }
+    }
   }
 
   .title-star{
@@ -722,13 +658,13 @@ form{
     }
   }
 
-  h6{
+  .heading6{
     font-size: 14px;
     margin-bottom: 30px;
   }
 
   .program-container{
-    padding-bottom: 50px;
+    padding-bottom: 200px;
   }
   .program-course{
     .program-title{
@@ -775,6 +711,38 @@ form{
         &:nth-child(2){
           border-top: 1px solid $black;
         }
+      }
+    }
+    nav{
+      position: relative;
+      margin-bottom: 10px;
+      ul{
+        padding: 20px 0;
+        overflow: scroll;
+        justify-content: flex-start;
+        li{
+          a{
+            padding: 0 20px;
+          }
+        }
+      }
+
+      &:after{
+        content: "";
+        width: 20px;
+        height: 65px;
+        display: block;
+        background: rgba(237,237,237,0);
+        background: -moz-linear-gradient(left, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,237,237,0)), color-stop(100%, rgba(237,237,237,1)));
+        background: -webkit-linear-gradient(left, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 100%);
+        background: -o-linear-gradient(left, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 100%);
+        background: -ms-linear-gradient(left, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 100%);
+        background: linear-gradient(to right, rgba(237,237,237,0) 0%, rgba(237,237,237,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ededed', GradientType=1 );
+        position: absolute;
+        right: 0;
+        top: 0;
       }
     }
   }
@@ -836,9 +804,11 @@ form{
         i,
         .text{
           line-height: 100%;
+          width: auto;
         }
         i{
           font-size: 20px;
+          margin-right: 20px;
         }
         .text{
           border: 0;
@@ -857,6 +827,7 @@ form{
     flex-direction: column;
     span{
       &:first-of-type{
+        margin-bottom: 10px;
         &:after{
           content: none;
         }
@@ -875,15 +846,113 @@ form{
   }
 
 
+  //hamburguer menu mobile-menu
+
+  #menuToggle{
+    display: block;
+    position: fixed;
+    top: 13px;
+    left: 13px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    border-bottom: none;
+    font-family: Intro;
+
+    input{
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+      -webkit-touch-callout: none;
+      &:checked{
+        & ~ span{
+          opacity: 1;
+          transform: rotate(-45deg) translateY(-1px);
+          background: $lightyellow;
+        }
+        & ~ span:nth-child(2){
+          opacity: 1;
+          transform: rotate(45deg) translateY(-1px);
+        }
+        & ~ span:nth-child(3){
+          opacity: 0;
+          transform: rotate(0deg)
+            scale(0.2, 0.2);
+        }
+        & ~ ul{
+          transform: scale(1.0, 1.0);
+          opacity: 1;
+        }
+      }
+    }
+
+    span{
+      display: block;
+      width: 26px;
+      height: 2px;
+      margin-bottom: 5px;
+      position: relative;
+      background: $white;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 3px 0px;
+      transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+      &:first-child{
+        transform-origin: 0% 0%;
+      }
+      &:last-child{
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+
+  #menu{
+    position: absolute;
+    width: 100vw;
+    height: 110vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: rgba($black, 0.9);;
+    list-style-type: none;
+    transform-origin: 0 0;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    text-align: center;
+    li{
+      padding: 15px 0;
+      color: #000000;
+      list-style-type: none;
+      font-size: 2em;
+      font-weight: 300;
+      a{
+        color: $white;
+        text-decoration: none;
+        &:hover{
+          color: $lightyellow;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .separator{
+    margin-bottom: 30px;
+  }
+
+
+
   @media (max-width: 360px){
     .program-course{
       nav{
         ul{
-          flex-direction: column;
           border-bottom: 0;
-          li{
-            padding: 40px;
-          }
         }
       }
       .program-image-description{
